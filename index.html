@@ -1,5 +1,6 @@
 
 
+
 HYPEIN — Complete Updated "index.html"
 
 <!DOCTYPE html>
@@ -1321,28 +1322,3992 @@ const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
 
 
 /* =====================================================
+   VARIHYPEIN — Complete Updated "index.html"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HYPEIN — Wear the Hype</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.96);
+  border-bottom: 1px solid #252525;
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 72px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-weight: 700;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.icon-btn:hover {
+  border-color: #d4af37;
+}
+
+.cart-count {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(
+      circle at center,
+      #252525 0%,
+      #101010 38%,
+      #080808 72%
+    );
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 10vw, 100px);
+  letter-spacing: 8px;
+  font-weight: 1000;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero p {
+  margin: 20px auto;
+  color: #bbb;
+  font-size: 19px;
+  max-width: 600px;
+}
+
+.gold-btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.gold-btn:hover {
+  background: #f1cf55;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.section-title p {
+  color: #999;
+  margin-top: 8px;
+}
+
+/* =========================
+   SHOP TOOLS
+========================= */
+
+.shop-tools {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 220px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: white;
+  outline: none;
+}
+
+.search-box:focus {
+  border-color: #d4af37;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  padding: 11px 15px;
+  border-radius: 9px;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #d4af37;
+  color: #080808;
+  border-color: #d4af37;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #252525;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.product-image-wrap {
+  position: relative;
+  background: #151515;
+}
+
+.product-image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4af37;
+  color: #080808;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 18px;
+}
+
+.product-category {
+  color: #d4af37;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-info h3 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.product-info p {
+  color: #999;
+  font-size: 14px;
+  min-height: 43px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.add-btn,
+.buy-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.add-btn {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+}
+
+.buy-btn {
+  background: #d4af37;
+  color: #080808;
+  border: 1px solid #d4af37;
+}
+
+.add-btn:hover {
+  border-color: #d4af37;
+}
+
+.buy-btn:hover {
+  background: #f1cf55;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}
+
+/* =========================
+   PRODUCT OPTIONS
+========================= */
+
+.option-box {
+  margin-top: 14px;
+}
+
+.option-box label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.option-box select {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.option-box select:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-section {
+  background: #101010;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  max-width: none;
+}
+
+.cart-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  margin-bottom: 4px;
+}
+
+.cart-item-info p {
+  color: #aaa;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+  background: #191919;
+  color: white;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background: transparent;
+  color: #ff7070;
+  border: none;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 900;
+  padding-top: 25px;
+}
+
+.cart-empty {
+  color: #999;
+  text-align: center;
+  padding: 30px;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: #071b0e;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: #aaa;
+  font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.contact-card h3 {
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.auth-box {
+  max-width: 450px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  background: #181818;
+  color: white;
+  border: 1px solid #333;
+}
+
+.auth-tab.active {
+  background: #d4af37;
+  color: #080808;
+}
+
+.auth-message {
+  margin-top: 12px;
+  color: #d4af37;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #050505;
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 35px 20px;
+  color: #777;
+}
+
+footer strong {
+  color: #d4af37;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .product-image {
+    height: 360px;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cart-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .quantity {
+    margin-left: 80px;
+  }
+
+  .remove-btn {
+    margin-left: auto;
+  }
+
+  .cart-total {
+    text-align: center;
+  }
+
+  .checkout-buttons {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      HYPE<span>IN</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#account">Account</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <button
+        class="icon-btn"
+        onclick="scrollToCart()"
+        aria-label="Open cart"
+      >
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>
+      HYPE<span>IN</span>
+    </h1>
+
+    <p>
+      Wear the energy. Wear the attitude.
+      Discover the latest HYPEIN collection.
+    </p>
+
+    <a href="#shop" class="gold-btn">
+      SHOP NOW
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SHOP
+========================= -->
+
+<section id="shop">
+
+  <div class="section-title">
+
+    <h2>HYPEIN COLLECTION</h2>
+
+    <p>
+      Premium streetwear. Wear the Hype.
+    </p>
+
+  </div>
+
+  <div class="shop-tools">
+
+    <input
+      type="search"
+      id="searchInput"
+      class="search-box"
+      placeholder="🔎 Search products..."
+      oninput="filterProducts()"
+    >
+
+    <div class="category-buttons">
+
+      <button
+        class="category-btn active"
+        onclick="setCategory('All', this)"
+      >
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('T-Shirts', this)"
+      >
+        T-Shirts
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Pants', this)"
+      >
+        Pants
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Hoodies', this)"
+      >
+        Hoodies
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    class="product-grid"
+    id="productGrid"
+  ></div>
+
+</section>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<section class="cart-section" id="cart">
+
+  <div class="cart-inner">
+
+    <div class="section-title">
+
+      <h2>YOUR CART</h2>
+
+      <p>
+        Review your HYPEIN items.
+      </p>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
+    </div>
+
+    <div class="checkout-buttons">
+
+      <button
+        class="whatsapp-btn"
+        onclick="orderOnWhatsApp()"
+      >
+        📱 Order on WhatsApp
+      </button>
+
+      <button
+        class="gold-btn"
+        onclick="clearCart()"
+      >
+        Clear Cart
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="section-title">
+
+    <h2>ABOUT HYPEIN</h2>
+
+  </div>
+
+  <div class="about-box">
+
+    <p>
+      HYPEIN is a clothing brand built around confidence,
+      energy and personal style.
+    </p>
+
+    <br>
+
+    <p>
+      Our goal is simple — create clothing that lets you
+      wear your own vibe.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="section-title">
+
+    <h2>CONTACT US</h2>
+
+    <p>
+      Have a question? Send us a message.
+    </p>
+
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <h3>📧 Send a Message</h3>
+
+      <form onsubmit="sendContactEmail(event)">
+
+        <div class="form-group">
+
+          <label for="contactName">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="contactName"
+            required
+            placeholder="Enter your name"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactEmail">
+            Your Email
+          </label>
+
+          <input
+            type="email"
+            id="contactEmail"
+            required
+            placeholder="Enter your email"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactMessage">
+            Message
+          </label>
+
+          <textarea
+            id="contactMessage"
+            required
+            placeholder="Write your message..."
+          ></textarea>
+
+        </div>
+
+        <button
+          class="gold-btn"
+          type="submit"
+        >
+          SEND MESSAGE
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <h3>📱 WhatsApp</h3>
+
+      <p style="color:#aaa; margin-bottom:20px;">
+
+        Want to ask about a product or place an order?
+        Contact HYPEIN on WhatsApp.
+
+      </p>
+
+      <button
+        class="whatsapp-btn"
+        onclick="openWhatsApp()"
+      >
+        💬 Chat on WhatsApp
+      </button>
+
+      <br><br>
+
+      <p style="color:#777;">
+
+        WhatsApp opens directly with your HYPEIN
+        business chat.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACCOUNT
+========================= -->
+
+<section id="account">
+
+  <div class="section-title">
+
+    <h2>ACCOUNT</h2>
+
+    <p>
+      Login or create an account.
+    </p>
+
+  </div>
+
+  <div class="auth-box">
+
+    <div class="auth-tabs">
+
+      <button
+        class="auth-tab active"
+        id="loginTab"
+        onclick="showAuth('login')"
+      >
+        Login
+      </button>
+
+      <button
+        class="auth-tab"
+        id="signupTab"
+        onclick="showAuth('signup')"
+      >
+        Sign Up
+      </button>
+
+    </div>
+
+    <form
+      id="loginForm"
+      onsubmit="loginUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="loginEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="loginEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="loginPassword"
+          required
+          placeholder="Password"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        LOGIN
+      </button>
+
+    </form>
+
+
+    <form
+      id="signupForm"
+      style="display:none;"
+      onsubmit="signupUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="signupName">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="signupName"
+          required
+          placeholder="Your name"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="signupEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="signupPassword"
+          required
+          minlength="6"
+          placeholder="At least 6 characters"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        CREATE ACCOUNT
+      </button>
+
+    </form>
+
+    <div
+      class="auth-message"
+      id="authMessage"
+    ></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <p>
+
+    ©️
+    <span id="year"></span>
+
+    <strong>HYPEIN</strong>.
+
+    All rights reserved.
+
+  </p>
+
+  <p style="margin-top:8px;">
+    Wear the Hype.
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   HYPEIN PRODUCTS
+===================================================== */
+
+/*
+IMPORTANT:
+
+Put your product images inside an "images" folder
+in the same GitHub repository as index.html.
+
+Example:
+
+images/product1.jpg
+images/product2.jpg
+images/product3.jpg
+...
+
+Then change the filenames below if necessary.
+*/
+
+const products = [
+
+  {
+    id: 1,
+    name: "HYPEIN Oversized Graphic Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product1.jpg",
+    description: "Premium oversized graphic streetwear T-shirt.",
+    badge: "NEW"
+  },
+
+  {
+    id: 2,
+    name: "HYPEIN Premium Oversized Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product2.jpg",
+    description: "Premium oversized fit made for everyday streetwear.",
+    badge: "NEW"
+  },
+
+  {
+    id: 3,
+    name: "HYPEIN Oversized Polo",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product3.jpg",
+    description: "Premium oversized polo with a clean streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 4,
+    name: "HYPEIN Baggy Wide-Leg Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product4.jpg",
+    description: "Relaxed wide-leg denim built for a bold streetwear fit.",
+    badge: "NEW"
+  },
+
+  {
+    id: 5,
+    name: "HYPEIN Baggy Street Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product5.jpg",
+    description: "Relaxed baggy denim with a modern streetwear silhouette.",
+    badge: "NEW"
+  },
+
+  {
+    id: 6,
+    name: "HYPEIN Graphic Hoodie",
+    category: "Hoodies",
+    price: 1799,
+    image: "images/product6.jpg",
+    description: "Statement graphic hoodie for a premium streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 7,
+    name: "HYPEIN Premium Printed Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product7.jpg",
+    description: "Premium printed hoodie designed for everyday comfort.",
+    badge: "NEW"
+  },
+
+  {
+    id: 8,
+    name: "HYPEIN Statement Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product8.jpg",
+    description: "Bold graphic T-shirt made for standout streetwear style.",
+    badge: "NEW"
+  },
+
+  {
+    id: 9,
+    name: "HYPEIN Streetwear Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product9.jpg",
+    description: "Oversized streetwear T-shirt with a premium finish.",
+    badge: "NEW"
+  },
+
+  {
+    id: 10,
+    name: "HYPEIN Signature Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product10.jpg",
+    description: "Premium HYPEIN hoodie with a bold signature design.",
+    badge: "NEW"
+  }
+
+];
+
+
+/* =====================================================
+   BUSINESS SETTINGS
+===================================================== */
+
+/*
+Replace these with your real HYPEIN details.
+
+WhatsApp example:
+919876543210
+
+Do NOT put +, spaces or brackets.
+*/
+
+const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+
+const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
+
+
+/* =====================================================
    VARI
+HYPEIN — Complete Updated "index.html"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HYPEIN — Wear the Hype</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.96);
+  border-bottom: 1px solid #252525;
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 72px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-weight: 700;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.icon-btn:hover {
+  border-color: #d4af37;
+}
+
+.cart-count {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(
+      circle at center,
+      #252525 0%,
+      #101010 38%,
+      #080808 72%
+    );
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 10vw, 100px);
+  letter-spacing: 8px;
+  font-weight: 1000;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero p {
+  margin: 20px auto;
+  color: #bbb;
+  font-size: 19px;
+  max-width: 600px;
+}
+
+.gold-btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.gold-btn:hover {
+  background: #f1cf55;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.section-title p {
+  color: #999;
+  margin-top: 8px;
+}
+
+/* =========================
+   SHOP TOOLS
+========================= */
+
+.shop-tools {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 220px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: white;
+  outline: none;
+}
+
+.search-box:focus {
+  border-color: #d4af37;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  padding: 11px 15px;
+  border-radius: 9px;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #d4af37;
+  color: #080808;
+  border-color: #d4af37;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #252525;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.product-image-wrap {
+  position: relative;
+  background: #151515;
+}
+
+.product-image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4af37;
+  color: #080808;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 18px;
+}
+
+.product-category {
+  color: #d4af37;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-info h3 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.product-info p {
+  color: #999;
+  font-size: 14px;
+  min-height: 43px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.add-btn,
+.buy-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.add-btn {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+}
+
+.buy-btn {
+  background: #d4af37;
+  color: #080808;
+  border: 1px solid #d4af37;
+}
+
+.add-btn:hover {
+  border-color: #d4af37;
+}
+
+.buy-btn:hover {
+  background: #f1cf55;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}
+
+/* =========================
+   PRODUCT OPTIONS
+========================= */
+
+.option-box {
+  margin-top: 14px;
+}
+
+.option-box label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.option-box select {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.option-box select:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-section {
+  background: #101010;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  max-width: none;
+}
+
+.cart-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  margin-bottom: 4px;
+}
+
+.cart-item-info p {
+  color: #aaa;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+  background: #191919;
+  color: white;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background: transparent;
+  color: #ff7070;
+  border: none;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 900;
+  padding-top: 25px;
+}
+
+.cart-empty {
+  color: #999;
+  text-align: center;
+  padding: 30px;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: #071b0e;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: #aaa;
+  font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.contact-card h3 {
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.auth-box {
+  max-width: 450px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  background: #181818;
+  color: white;
+  border: 1px solid #333;
+}
+
+.auth-tab.active {
+  background: #d4af37;
+  color: #080808;
+}
+
+.auth-message {
+  margin-top: 12px;
+  color: #d4af37;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #050505;
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 35px 20px;
+  color: #777;
+}
+
+footer strong {
+  color: #d4af37;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .product-image {
+    height: 360px;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cart-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .quantity {
+    margin-left: 80px;
+  }
+
+  .remove-btn {
+    margin-left: auto;
+  }
+
+  .cart-total {
+    text-align: center;
+  }
+
+  .checkout-buttons {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      HYPE<span>IN</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#account">Account</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <button
+        class="icon-btn"
+        onclick="scrollToCart()"
+        aria-label="Open cart"
+      >
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>
+      HYPE<span>IN</span>
+    </h1>
+
+    <p>
+      Wear the energy. Wear the attitude.
+      Discover the latest HYPEIN collection.
+    </p>
+
+    <a href="#shop" class="gold-btn">
+      SHOP NOW
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SHOP
+========================= -->
+
+<section id="shop">
+
+  <div class="section-title">
+
+    <h2>HYPEIN COLLECTION</h2>
+
+    <p>
+      Premium streetwear. Wear the Hype.
+    </p>
+
+  </div>
+
+  <div class="shop-tools">
+
+    <input
+      type="search"
+      id="searchInput"
+      class="search-box"
+      placeholder="🔎 Search products..."
+      oninput="filterProducts()"
+    >
+
+    <div class="category-buttons">
+
+      <button
+        class="category-btn active"
+        onclick="setCategory('All', this)"
+      >
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('T-Shirts', this)"
+      >
+        T-Shirts
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Pants', this)"
+      >
+        Pants
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Hoodies', this)"
+      >
+        Hoodies
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    class="product-grid"
+    id="productGrid"
+  ></div>
+
+</section>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<section class="cart-section" id="cart">
+
+  <div class="cart-inner">
+
+    <div class="section-title">
+
+      <h2>YOUR CART</h2>
+
+      <p>
+        Review your HYPEIN items.
+      </p>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
+    </div>
+
+    <div class="checkout-buttons">
+
+      <button
+        class="whatsapp-btn"
+        onclick="orderOnWhatsApp()"
+      >
+        📱 Order on WhatsApp
+      </button>
+
+      <button
+        class="gold-btn"
+        onclick="clearCart()"
+      >
+        Clear Cart
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="section-title">
+
+    <h2>ABOUT HYPEIN</h2>
+
+  </div>
+
+  <div class="about-box">
+
+    <p>
+      HYPEIN is a clothing brand built around confidence,
+      energy and personal style.
+    </p>
+
+    <br>
+
+    <p>
+      Our goal is simple — create clothing that lets you
+      wear your own vibe.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="section-title">
+
+    <h2>CONTACT US</h2>
+
+    <p>
+      Have a question? Send us a message.
+    </p>
+
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <h3>📧 Send a Message</h3>
+
+      <form onsubmit="sendContactEmail(event)">
+
+        <div class="form-group">
+
+          <label for="contactName">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="contactName"
+            required
+            placeholder="Enter your name"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactEmail">
+            Your Email
+          </label>
+
+          <input
+            type="email"
+            id="contactEmail"
+            required
+            placeholder="Enter your email"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactMessage">
+            Message
+          </label>
+
+          <textarea
+            id="contactMessage"
+            required
+            placeholder="Write your message..."
+          ></textarea>
+
+        </div>
+
+        <button
+          class="gold-btn"
+          type="submit"
+        >
+          SEND MESSAGE
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <h3>📱 WhatsApp</h3>
+
+      <p style="color:#aaa; margin-bottom:20px;">
+
+        Want to ask about a product or place an order?
+        Contact HYPEIN on WhatsApp.
+
+      </p>
+
+      <button
+        class="whatsapp-btn"
+        onclick="openWhatsApp()"
+      >
+        💬 Chat on WhatsApp
+      </button>
+
+      <br><br>
+
+      <p style="color:#777;">
+
+        WhatsApp opens directly with your HYPEIN
+        business chat.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACCOUNT
+========================= -->
+
+<section id="account">
+
+  <div class="section-title">
+
+    <h2>ACCOUNT</h2>
+
+    <p>
+      Login or create an account.
+    </p>
+
+  </div>
+
+  <div class="auth-box">
+
+    <div class="auth-tabs">
+
+      <button
+        class="auth-tab active"
+        id="loginTab"
+        onclick="showAuth('login')"
+      >
+        Login
+      </button>
+
+      <button
+        class="auth-tab"
+        id="signupTab"
+        onclick="showAuth('signup')"
+      >
+        Sign Up
+      </button>
+
+    </div>
+
+    <form
+      id="loginForm"
+      onsubmit="loginUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="loginEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="loginEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="loginPassword"
+          required
+          placeholder="Password"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        LOGIN
+      </button>
+
+    </form>
+
+
+    <form
+      id="signupForm"
+      style="display:none;"
+      onsubmit="signupUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="signupName">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="signupName"
+          required
+          placeholder="Your name"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="signupEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="signupPassword"
+          required
+          minlength="6"
+          placeholder="At least 6 characters"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        CREATE ACCOUNT
+      </button>
+
+    </form>
+
+    <div
+      class="auth-message"
+      id="authMessage"
+    ></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <p>
+
+    ©️
+    <span id="year"></span>
+
+    <strong>HYPEIN</strong>.
+
+    All rights reserved.
+
+  </p>
+
+  <p style="margin-top:8px;">
+    Wear the Hype.
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   HYPEIN PRODUCTS
+===================================================== */
+
+/*
+IMPORTANT:
+
+Put your product images inside an "images" folder
+in the same GitHub repository as index.html.
+
+Example:
+
+images/product1.jpg
+images/product2.jpg
+images/product3.jpg
+...
+
+Then change the filenames below if necessary.
+*/
+
+const products = [
+
+  {
+    id: 1,
+    name: "HYPEIN Oversized Graphic Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product1.jpg",
+    description: "Premium oversized graphic streetwear T-shirt.",
+    badge: "NEW"
+  },
+
+  {
+    id: 2,
+    name: "HYPEIN Premium Oversized Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product2.jpg",
+    description: "Premium oversized fit made for everyday streetwear.",
+    badge: "NEW"
+  },
+
+  {
+    id: 3,
+    name: "HYPEIN Oversized Polo",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product3.jpg",
+    description: "Premium oversized polo with a clean streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 4,
+    name: "HYPEIN Baggy Wide-Leg Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product4.jpg",
+    description: "Relaxed wide-leg denim built for a bold streetwear fit.",
+    badge: "NEW"
+  },
+
+  {
+    id: 5,
+    name: "HYPEIN Baggy Street Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product5.jpg",
+    description: "Relaxed baggy denim with a modern streetwear silhouette.",
+    badge: "NEW"
+  },
+
+  {
+    id: 6,
+    name: "HYPEIN Graphic Hoodie",
+    category: "Hoodies",
+    price: 1799,
+    image: "images/product6.jpg",
+    description: "Statement graphic hoodie for a premium streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 7,
+    name: "HYPEIN Premium Printed Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product7.jpg",
+    description: "Premium printed hoodie designed for everyday comfort.",
+    badge: "NEW"
+  },
+
+  {
+    id: 8,
+    name: "HYPEIN Statement Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product8.jpg",
+    description: "Bold graphic T-shirt made for standout streetwear style.",
+    badge: "NEW"
+  },
+
+  {
+    id: 9,
+    name: "HYPEIN Streetwear Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product9.jpg",
+    description: "Oversized streetwear T-shirt with a premium finish.",
+    badge: "NEW"
+  },
+
+  {
+    id: 10,
+    name: "HYPEIN Signature Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product10.jpg",
+    description: "Premium HYPEIN hoodie with a bold signature design.",
+    badge: "NEW"
+  }
+
+];
+
+
+/* =====================================================
+   BUSINESS SETTINGS
+===================================================== */
+
+/*
+Replace these with your real HYPEIN details.
+
+WhatsApp example:
+919876543210
+
+Do NOT put +, spaces or brackets.
+*/
+
+const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+
+const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
+
+
+/* =====================================================
+   VARIHYPEIN — Complete Updated "index.html"
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HYPEIN — Wear the Hype</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #080808;
+  color: #f5f5f5;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(8, 8, 8, 0.96);
+  border-bottom: 1px solid #252525;
+  backdrop-filter: blur(10px);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 72px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.logo span {
+  color: #d4af37;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  font-weight: 700;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.icon-btn:hover {
+  border-color: #d4af37;
+}
+
+.cart-count {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(
+      circle at center,
+      #252525 0%,
+      #101010 38%,
+      #080808 72%
+    );
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 10vw, 100px);
+  letter-spacing: 8px;
+  font-weight: 1000;
+}
+
+.hero h1 span {
+  color: #d4af37;
+}
+
+.hero p {
+  margin: 20px auto;
+  color: #bbb;
+  font-size: 19px;
+  max-width: 600px;
+}
+
+.gold-btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #080808;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.gold-btn:hover {
+  background: #f1cf55;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+.section-title p {
+  color: #999;
+  margin-top: 8px;
+}
+
+/* =========================
+   SHOP TOOLS
+========================= */
+
+.shop-tools {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  flex: 1;
+  min-width: 220px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: white;
+  outline: none;
+}
+
+.search-box:focus {
+  border-color: #d4af37;
+}
+
+.category-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  border: 1px solid #333;
+  background: #111;
+  color: white;
+  padding: 11px 15px;
+  border-radius: 9px;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #d4af37;
+  color: #080808;
+  border-color: #d4af37;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.product-card {
+  background: #111;
+  border: 1px solid #252525;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #d4af37;
+}
+
+.product-image-wrap {
+  position: relative;
+  background: #151515;
+}
+
+.product-image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4af37;
+  color: #080808;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.product-info {
+  padding: 18px;
+}
+
+.product-category {
+  color: #d4af37;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.product-info h3 {
+  margin: 7px 0;
+  font-size: 21px;
+}
+
+.product-info p {
+  color: #999;
+  font-size: 14px;
+  min-height: 43px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 12px 0;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.add-btn,
+.buy-btn {
+  flex: 1;
+  padding: 11px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.add-btn {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+}
+
+.buy-btn {
+  background: #d4af37;
+  color: #080808;
+  border: 1px solid #d4af37;
+}
+
+.add-btn:hover {
+  border-color: #d4af37;
+}
+
+.buy-btn:hover {
+  background: #f1cf55;
+}
+
+.no-products {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  padding: 40px;
+}
+
+/* =========================
+   PRODUCT OPTIONS
+========================= */
+
+.option-box {
+  margin-top: 14px;
+}
+
+.option-box label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.option-box select {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.option-box select:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-section {
+  background: #101010;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  max-width: none;
+}
+
+.cart-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-info h4 {
+  margin-bottom: 4px;
+}
+
+.cart-item-info p {
+  color: #aaa;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #444;
+  background: #191919;
+  color: white;
+  border-radius: 6px;
+}
+
+.remove-btn {
+  background: transparent;
+  color: #ff7070;
+  border: none;
+}
+
+.cart-total {
+  text-align: right;
+  font-size: 25px;
+  font-weight: 900;
+  padding-top: 25px;
+}
+
+.cart-empty {
+  color: #999;
+  text-align: center;
+  padding: 30px;
+}
+
+.checkout-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: #071b0e;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 8px;
+  font-weight: 900;
+}
+
+.whatsapp-btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-box {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: #aaa;
+  font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-card {
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.contact-card h3 {
+  margin-bottom: 18px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #d4af37;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.auth-box {
+  max-width: 450px;
+  margin: auto;
+  background: #111;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.auth-tab {
+  flex: 1;
+  padding: 12px;
+  background: #181818;
+  color: white;
+  border: 1px solid #333;
+}
+
+.auth-tab.active {
+  background: #d4af37;
+  color: #080808;
+}
+
+.auth-message {
+  margin-top: 12px;
+  color: #d4af37;
+  text-align: center;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #050505;
+  border-top: 1px solid #222;
+  text-align: center;
+  padding: 35px 20px;
+  color: #777;
+}
+
+footer strong {
+  color: #d4af37;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .hero h1 {
+    font-size: 54px;
+  }
+
+  .product-image {
+    height: 360px;
+  }
+
+  .cart-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .cart-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .quantity {
+    margin-left: 80px;
+  }
+
+  .remove-btn {
+    margin-left: auto;
+  }
+
+  .cart-total {
+    text-align: center;
+  }
+
+  .checkout-buttons {
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+  <div class="nav-inner">
+
+    <a href="#home" class="logo">
+      HYPE<span>IN</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#account">Account</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <button
+        class="icon-btn"
+        onclick="scrollToCart()"
+        aria-label="Open cart"
+      >
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>
+      HYPE<span>IN</span>
+    </h1>
+
+    <p>
+      Wear the energy. Wear the attitude.
+      Discover the latest HYPEIN collection.
+    </p>
+
+    <a href="#shop" class="gold-btn">
+      SHOP NOW
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SHOP
+========================= -->
+
+<section id="shop">
+
+  <div class="section-title">
+
+    <h2>HYPEIN COLLECTION</h2>
+
+    <p>
+      Premium streetwear. Wear the Hype.
+    </p>
+
+  </div>
+
+  <div class="shop-tools">
+
+    <input
+      type="search"
+      id="searchInput"
+      class="search-box"
+      placeholder="🔎 Search products..."
+      oninput="filterProducts()"
+    >
+
+    <div class="category-buttons">
+
+      <button
+        class="category-btn active"
+        onclick="setCategory('All', this)"
+      >
+        All
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('T-Shirts', this)"
+      >
+        T-Shirts
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Pants', this)"
+      >
+        Pants
+      </button>
+
+      <button
+        class="category-btn"
+        onclick="setCategory('Hoodies', this)"
+      >
+        Hoodies
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    class="product-grid"
+    id="productGrid"
+  ></div>
+
+</section>
+
+
+<!-- =========================
+     CART
+========================= -->
+
+<section class="cart-section" id="cart">
+
+  <div class="cart-inner">
+
+    <div class="section-title">
+
+      <h2>YOUR CART</h2>
+
+      <p>
+        Review your HYPEIN items.
+      </p>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      Total: ₹<span id="cartTotal">0</span>
+    </div>
+
+    <div class="checkout-buttons">
+
+      <button
+        class="whatsapp-btn"
+        onclick="orderOnWhatsApp()"
+      >
+        📱 Order on WhatsApp
+      </button>
+
+      <button
+        class="gold-btn"
+        onclick="clearCart()"
+      >
+        Clear Cart
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+  <div class="section-title">
+
+    <h2>ABOUT HYPEIN</h2>
+
+  </div>
+
+  <div class="about-box">
+
+    <p>
+      HYPEIN is a clothing brand built around confidence,
+      energy and personal style.
+    </p>
+
+    <br>
+
+    <p>
+      Our goal is simple — create clothing that lets you
+      wear your own vibe.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+  <div class="section-title">
+
+    <h2>CONTACT US</h2>
+
+    <p>
+      Have a question? Send us a message.
+    </p>
+
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+
+      <h3>📧 Send a Message</h3>
+
+      <form onsubmit="sendContactEmail(event)">
+
+        <div class="form-group">
+
+          <label for="contactName">
+            Your Name
+          </label>
+
+          <input
+            type="text"
+            id="contactName"
+            required
+            placeholder="Enter your name"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactEmail">
+            Your Email
+          </label>
+
+          <input
+            type="email"
+            id="contactEmail"
+            required
+            placeholder="Enter your email"
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="contactMessage">
+            Message
+          </label>
+
+          <textarea
+            id="contactMessage"
+            required
+            placeholder="Write your message..."
+          ></textarea>
+
+        </div>
+
+        <button
+          class="gold-btn"
+          type="submit"
+        >
+          SEND MESSAGE
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <h3>📱 WhatsApp</h3>
+
+      <p style="color:#aaa; margin-bottom:20px;">
+
+        Want to ask about a product or place an order?
+        Contact HYPEIN on WhatsApp.
+
+      </p>
+
+      <button
+        class="whatsapp-btn"
+        onclick="openWhatsApp()"
+      >
+        💬 Chat on WhatsApp
+      </button>
+
+      <br><br>
+
+      <p style="color:#777;">
+
+        WhatsApp opens directly with your HYPEIN
+        business chat.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ACCOUNT
+========================= -->
+
+<section id="account">
+
+  <div class="section-title">
+
+    <h2>ACCOUNT</h2>
+
+    <p>
+      Login or create an account.
+    </p>
+
+  </div>
+
+  <div class="auth-box">
+
+    <div class="auth-tabs">
+
+      <button
+        class="auth-tab active"
+        id="loginTab"
+        onclick="showAuth('login')"
+      >
+        Login
+      </button>
+
+      <button
+        class="auth-tab"
+        id="signupTab"
+        onclick="showAuth('signup')"
+      >
+        Sign Up
+      </button>
+
+    </div>
+
+    <form
+      id="loginForm"
+      onsubmit="loginUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="loginEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="loginEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="loginPassword"
+          required
+          placeholder="Password"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        LOGIN
+      </button>
+
+    </form>
+
+
+    <form
+      id="signupForm"
+      style="display:none;"
+      onsubmit="signupUser(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="signupName">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="signupName"
+          required
+          placeholder="Your name"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="signupEmail"
+          required
+          placeholder="Email"
+        >
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="signupPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="signupPassword"
+          required
+          minlength="6"
+          placeholder="At least 6 characters"
+        >
+
+      </div>
+
+      <button
+        class="gold-btn"
+        type="submit"
+      >
+        CREATE ACCOUNT
+      </button>
+
+    </form>
+
+    <div
+      class="auth-message"
+      id="authMessage"
+    ></div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <p>
+
+    ©️
+    <span id="year"></span>
+
+    <strong>HYPEIN</strong>.
+
+    All rights reserved.
+
+  </p>
+
+  <p style="margin-top:8px;">
+    Wear the Hype.
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   HYPEIN PRODUCTS
+===================================================== */
+
+/*
+IMPORTANT:
+
+Put your product images inside an "images" folder
+in the same GitHub repository as index.html.
+
+Example:
+
+images/product1.jpg
+images/product2.jpg
+images/product3.jpg
+...
+
+Then change the filenames below if necessary.
+*/
+
+const products = [
+
+  {
+    id: 1,
+    name: "HYPEIN Oversized Graphic Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product1.jpg",
+    description: "Premium oversized graphic streetwear T-shirt.",
+    badge: "NEW"
+  },
+
+  {
+    id: 2,
+    name: "HYPEIN Premium Oversized Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product2.jpg",
+    description: "Premium oversized fit made for everyday streetwear.",
+    badge: "NEW"
+  },
+
+  {
+    id: 3,
+    name: "HYPEIN Oversized Polo",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product3.jpg",
+    description: "Premium oversized polo with a clean streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 4,
+    name: "HYPEIN Baggy Wide-Leg Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product4.jpg",
+    description: "Relaxed wide-leg denim built for a bold streetwear fit.",
+    badge: "NEW"
+  },
+
+  {
+    id: 5,
+    name: "HYPEIN Baggy Street Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product5.jpg",
+    description: "Relaxed baggy denim with a modern streetwear silhouette.",
+    badge: "NEW"
+  },
+
+  {
+    id: 6,
+    name: "HYPEIN Graphic Hoodie",
+    category: "Hoodies",
+    price: 1799,
+    image: "images/product6.jpg",
+    description: "Statement graphic hoodie for a premium streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 7,
+    name: "HYPEIN Premium Printed Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product7.jpg",
+    description: "Premium printed hoodie designed for everyday comfort.",
+    badge: "NEW"
+  },
+
+  {
+    id: 8,
+    name: "HYPEIN Statement Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product8.jpg",
+    description: "Bold graphic T-shirt made for standout streetwear style.",
+    badge: "NEW"
+  },
+
+  {
+    id: 9,
+    name: "HYPEIN Streetwear Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product9.jpg",
+    description: "Oversized streetwear T-shirt with a premium finish.",
+    badge: "NEW"
+  },
+
+  {
+    id: 10,
+    name: "HYPEIN Signature Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product10.jpg",
+    description: "Premium HYPEIN hoodie with a bold signature design.",
+    badge: "NEW"
+  }
+
+];
+
+
+/* =====================================================
+   BUSINESS SETTINGS
+===================================================== */
+
+/*
+Replace these with your real HYPEIN details.
+
+WhatsApp example:
+919876543210
+
+Do NOT put +, spaces or brackets.
+*/
+
+const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+
+const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
+
+
+/* =====================================================
+   VARI
+
+
   
 
-   
-        
-      
-        
-      
 
-        
-      
+
 
     
     
-      
+
     
 
 
-      
-        
 
-
-
+            
 
   
+
+
+    
+    
+  
+  
+    
