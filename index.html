@@ -1,3 +1,7 @@
+
+
+HYPEIN — Complete Updated "index.html"
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +126,6 @@ a {
   justify-content: center;
   text-align: center;
   padding: 70px 20px;
-
   background:
     radial-gradient(
       circle at center,
@@ -196,7 +199,7 @@ section {
 }
 
 /* =========================
-   SHOP SEARCH
+   SHOP TOOLS
 ========================= */
 
 .shop-tools {
@@ -262,7 +265,12 @@ section {
 
 .product-card:hover {
   transform: translateY(-5px);
-  border-color: #555;
+  border-color: #d4af37;
+}
+
+.product-image-wrap {
+  position: relative;
+  background: #151515;
 }
 
 .product-image {
@@ -270,6 +278,19 @@ section {
   height: 330px;
   object-fit: cover;
   display: block;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #d4af37;
+  color: #080808;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .product-info {
@@ -339,6 +360,35 @@ section {
   text-align: center;
   color: #999;
   padding: 40px;
+}
+
+/* =========================
+   PRODUCT OPTIONS
+========================= */
+
+.option-box {
+  margin-top: 14px;
+}
+
+.option-box label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.option-box select {
+  width: 100%;
+  background: #080808;
+  border: 1px solid #333;
+  color: white;
+  padding: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+.option-box select:focus {
+  border-color: #d4af37;
 }
 
 /* =========================
@@ -695,10 +745,10 @@ footer strong {
 
   <div class="section-title">
 
-    <h2>SHOP HYPEIN</h2>
+    <h2>HYPEIN COLLECTION</h2>
 
     <p>
-      Find your style.
+      Premium streetwear. Wear the Hype.
     </p>
 
   </div>
@@ -851,8 +901,6 @@ footer strong {
 
   <div class="contact-grid">
 
-    <!-- CONTACT FORM -->
-
     <div class="contact-card">
 
       <h3>📧 Send a Message</h3>
@@ -914,8 +962,6 @@ footer strong {
 
     </div>
 
-
-    <!-- WHATSAPP -->
 
     <div class="contact-card">
 
@@ -989,9 +1035,6 @@ footer strong {
 
     </div>
 
-
-    <!-- LOGIN -->
-
     <form
       id="loginForm"
       onsubmit="loginUser(event)"
@@ -1036,8 +1079,6 @@ footer strong {
 
     </form>
 
-
-    <!-- SIGNUP -->
 
     <form
       id="signupForm"
@@ -1140,72 +1181,122 @@ footer strong {
    HYPEIN PRODUCTS
 ===================================================== */
 
+/*
+IMPORTANT:
+
+Put your product images inside an "images" folder
+in the same GitHub repository as index.html.
+
+Example:
+
+images/product1.jpg
+images/product2.jpg
+images/product3.jpg
+...
+
+Then change the filenames below if necessary.
+*/
+
 const products = [
 
   {
     id: 1,
-    name: "HYPEIN Classic Tee",
+    name: "HYPEIN Oversized Graphic Tee",
     category: "T-Shirts",
-    price: 799,
-    image:
-      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Classic HYPEIN everyday T-shirt."
+    price: 1299,
+    image: "images/product1.jpg",
+    description: "Premium oversized graphic streetwear T-shirt.",
+    badge: "NEW"
   },
 
   {
     id: 2,
-    name: "HYPEIN Black Tee",
+    name: "HYPEIN Premium Oversized Tee",
     category: "T-Shirts",
-    price: 899,
-    image:
-      "https://images.unsplash.com/photo-1503341504253-dff4815485f1?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Clean black streetwear style."
+    price: 1299,
+    image: "images/product2.jpg",
+    description: "Premium oversized fit made for everyday streetwear.",
+    badge: "NEW"
   },
 
   {
     id: 3,
-    name: "HYPEIN Street Pants",
-    category: "Pants",
-    price: 1499,
-    image:
-      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Comfortable street-style pants."
+    name: "HYPEIN Oversized Polo",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product3.jpg",
+    description: "Premium oversized polo with a clean streetwear look.",
+    badge: "NEW"
   },
 
   {
     id: 4,
-    name: "HYPEIN Cargo Pants",
+    name: "HYPEIN Baggy Wide-Leg Jeans",
     category: "Pants",
-    price: 1699,
-    image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Relaxed cargo-inspired design."
+    price: 1499,
+    image: "images/product4.jpg",
+    description: "Relaxed wide-leg denim built for a bold streetwear fit.",
+    badge: "NEW"
   },
 
   {
     id: 5,
-    name: "HYPEIN Essential Hoodie",
-    category: "Hoodies",
-    price: 1799,
-    image:
-      "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Warm and comfortable HYPEIN hoodie."
+    name: "HYPEIN Baggy Street Jeans",
+    category: "Pants",
+    price: 1499,
+    image: "images/product5.jpg",
+    description: "Relaxed baggy denim with a modern streetwear silhouette.",
+    badge: "NEW"
   },
 
   {
     id: 6,
-    name: "HYPEIN Premium Hoodie",
+    name: "HYPEIN Graphic Hoodie",
     category: "Hoodies",
-    price: 2199,
-    image:
-      "https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=900&q=80",
-    description:
-      "Premium oversized streetwear hoodie."
+    price: 1799,
+    image: "images/product6.jpg",
+    description: "Statement graphic hoodie for a premium streetwear look.",
+    badge: "NEW"
+  },
+
+  {
+    id: 7,
+    name: "HYPEIN Premium Printed Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product7.jpg",
+    description: "Premium printed hoodie designed for everyday comfort.",
+    badge: "NEW"
+  },
+
+  {
+    id: 8,
+    name: "HYPEIN Statement Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product8.jpg",
+    description: "Bold graphic T-shirt made for standout streetwear style.",
+    badge: "NEW"
+  },
+
+  {
+    id: 9,
+    name: "HYPEIN Streetwear Tee",
+    category: "T-Shirts",
+    price: 1299,
+    image: "images/product9.jpg",
+    description: "Oversized streetwear T-shirt with a premium finish.",
+    badge: "NEW"
+  },
+
+  {
+    id: 10,
+    name: "HYPEIN Signature Hoodie",
+    category: "Hoodies",
+    price: 1999,
+    image: "images/product10.jpg",
+    description: "Premium HYPEIN hoodie with a bold signature design.",
+    badge: "NEW"
   }
 
 ];
@@ -1216,116 +1307,35 @@ const products = [
 ===================================================== */
 
 /*
-   CHANGE THESE TWO VALUES
+Replace these with your real HYPEIN details.
+
+WhatsApp example:
+919876543210
+
+Do NOT put +, spaces or brackets.
 */
 
-/* Example: 919876543210 */
 const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
 
-/* Example: hypein@gmail.com */
 const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
 
 
 /* =====================================================
-   VARIABLES
-===================================================== */
-
-let currentCategory = "All";
-
-let cart = JSON.parse(
-  localStorage.getItem("hypeinCart") || "[]"
-);
-
-
-/* =====================================================
-   DISPLAY PRODUCTS
-===================================================== */
-
-function displayProducts(list) {
-
-  const grid =
-    document.getElementById("productGrid");
-
-  if (list.length === 0) {
-
-    grid.innerHTML = `
-      <div class="no-products">
-        No products found.
-      </div>
-    `;
-
-    return;
-  }
-
-  grid.innerHTML = list.map(product => `
-
-    <article class="product-card">
-
-      <img
-        class="product-image"
-        src="${product.image}"
-        alt="${product.name}"
-        loading="lazy"
-      >
-
-      <div class="product-info">
-
-        <div class="product-category">
-          ${product.category}
-        </div>
-
-        <h3>
-          ${product.name}
-        </h3>
-
-        <p>
-          ${product.description}
-        </p>
-
-        <div class="price">
-          ₹${product.price.toLocaleString("en-IN")}
-        </div>
-
-        <div class="product-buttons">
-
-          <button
-            class="add-btn"
-            onclick="addToCart(${product.id})"
-          >
-            Add to Cart
-          </button>
-
-          <button
-            class="buy-btn"
-            onclick="buyNow(${product.id})"
-          >
-            Buy Now
-          </button>
-
-        </div>
-
-      </div>
-
-    </article>
-
-  `).join("");
-
-}
-
-
-/* =====================================================
-   SEARCH + CATEGORY
-==================================================const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
-const CONTACT_EMAIL = "YOUR_EMAIL@example.com";const WHATSAPP_NUMBER = "919876543210";
-const CONTACT_EMAIL = "yourbusiness@gmail.com";
-
- 
-
-
-  
+   VARI
   
 
-  
+   
+        
+      
+        
+      
+
+        
+      
+
+    
+    
+      
     
 
 
