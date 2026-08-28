@@ -5305,7 +5305,118 @@ const CONTACT_EMAIL = "YOUR_EMAIL@example.com";
 /* =====================================================
    VARI
 
+// HYPEIN Products
+const products = [
+    {
+        id: 1,
+        name: "HYPEIN Graffiti Hoodie",
+        category: "Hoodies",
+        price: 1299,
+        image: "hoodie1.jpg"
+    }
+];
 
+let cart = JSON.parse(localStorage.getItem("hypeinCart")) || [];
+
+// Display products
+function displayProducts(productList = products) {
+    const productContainer = document.getElementById("products");
+
+    if (!productContainer) return;
+
+    productContainer.innerHTML = "";
+
+    productList.forEach(product => {
+        productContainer.innerHTML += `
+            <div class="product-card">
+                <img src="${product.image}" 
+                     alt="${product.name}"
+                     class="product-image">
+
+                <h3>${product.name}</h3>
+
+                <p class="product-category">${product.category}</p>
+
+                <h4>₹${product.price}</h4>
+
+                <button onclick="addToCart(${product.id})">
+                    🛒 Add to Cart
+                </button>
+            </div>
+        `;
+    });
+}
+
+// Add product to cart
+function addToCart(productId) {
+    const product = products.find(p => p.id === productId);
+
+    if (!product) return;
+
+    cart.push(product);
+
+    localStorage.setItem("hypeinCart", JSON.stringify(cart));
+
+    updateCart();
+
+    alert(`${product.name} added to cart!`);
+}
+
+// Update cart count and total
+function updateCart() {
+    const cartCount = document.getElementById("cart-count");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (cartCount) {
+        cartCount.textContent = cart.length;
+    }
+
+    if (cartTotal) {
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        cartTotal.textContent = `₹${total}`;
+    }
+}
+
+// Clear cart
+function clearCart() {
+    cart = [];
+
+    localStorage.removeItem("hypeinCart");
+
+    updateCart();
+}
+
+// WhatsApp order
+function orderOnWhatsApp() {
+    if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+    }
+
+    let message = "🔥 HYPEIN ORDER 🔥%0A%0A";
+
+    cart.forEach((item, index) => {
+        message += `${index + 1}. ${item.name} - ₹${item.price}%0A`;
+    });
+
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+    message += `%0A💰 Total: ₹${total}`;
+
+    // Replace this number with your WhatsApp number
+    const phoneNumber = "91XXXXXXXXXX";
+
+    window.open(
+        `https://wa.me/${phoneNumber}?text=${message}`,
+        "_blank"
+    );
+}
+
+// Start
+document.addEventListener("DOMContentLoaded", () => {
+    displayProducts();
+    updateCart();
+});
   
 
 
